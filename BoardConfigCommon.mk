@@ -15,7 +15,7 @@
 
 BOARD_VENDOR := lge
 
-COMMON_PATH := device/lge/g4-common
+COMMON_PATH := device/lge/v10-common
 
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
@@ -109,8 +109,8 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_BLUEDROID_VENDOR_CONF := device/lge/g4-common/bluetooth/libbt_vndcfg.txt
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/g4-common/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/lge/v10-common/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/v10-common/bluetooth
 
 # Camera
 USE_DEVICE_SPECIFIC_CAMERA := true
@@ -190,7 +190,7 @@ TARGET_HW_DISK_ENCRYPTION := false
 TARGET_INIT_VENDOR_LIB := libinit_msm
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/lge/g4-common/ril/
+BOARD_RIL_CLASS := ../../../device/lge/v10-common/ril/
 TARGET_RELEASE_CPPFLAGS += -DNEEDS_LGE_RIL_SYMBOLS
 
 # NFC
@@ -201,4 +201,4 @@ BOARD_NFC_DEVICE := "/dev/pn547"
 BOARD_HARDWARE_CLASS := $(COMMON_PATH)/cmhw/
 
 # inherit from the proprietary version
--include vendor/lge/g4-common/BoardConfigVendor.mk
+-include vendor/lge/v10-common/BoardConfigVendor.mk
