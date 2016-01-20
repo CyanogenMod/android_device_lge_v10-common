@@ -130,7 +130,8 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/sensor_def_common.conf:system/etc/sensors/sensor_def_common.conf \
-    $(LOCAL_PATH)/configs/sensors/sensor_def_variable.conf:system/etc/sensors/sensor_def_variable.conf
+    $(LOCAL_PATH)/configs/sensors/sensor_def_variable.conf:system/etc/sensors/sensor_def_variable.conf \
+    $(LOCAL_PATH)/configs/sensors/calib.cfg:system/media/display/calib.cfg
 
 # WiFi cal NVRAM file
 PRODUCT_COPY_FILES += \
@@ -195,7 +196,7 @@ PRODUCT_PACKAGES += \
 # NFC access control + feature files + configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    $(LOCAL_PATH)/configs/libnfc-nxp.conf:system/etc/libnfc-nxp.conf \
+    $(LOCAL_PATH)/configs/libnfc-brcm-20795a20.conf:system/etc/libnfc-brcm-20795a20.conf \
     $(LOCAL_PATH)/configs/nfcee_access.xml:system/etc/nfcee_access.xml
 
 # OMX
