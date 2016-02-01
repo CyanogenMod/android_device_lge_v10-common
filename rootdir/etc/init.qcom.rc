@@ -50,6 +50,11 @@ on early-fs
 
 # maintain the list of processes name for kernel monitoring usage
     chown system /sys/process/task_comm_list
+on post-fs-data
+
+# NFC: create data/nfc for nv storage
+    mkdir /data/nfc 770 nfc nfc
+    mkdir /data/nfc/param 770 nfc nfc
 
 on init
 
@@ -310,16 +315,6 @@ on boot
 
     class_start core
 
-    # NFC ++
-    # permissions for NFC
-    chmod 0600 /dev/pn547
-    chown nfc nfc /dev/pn547
-    setprop debug.nfc.fw_download "true"
-    setprop debug.nfc.fw_boot_download "false"
-    # NFC --
-
-    # HAL looks for pn54x but kernel driver uses pn547
-    symlink /dev/pn547 /dev/pn54x
 
     # exfat
     insmod /system/lib/modules/texfat.ko
