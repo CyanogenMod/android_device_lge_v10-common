@@ -118,6 +118,7 @@
 /dev/msm_camera/*         0660   system     camera
 /dev/gemini/              0660   system     camera
 /dev/mercury0             0660   system     camera
+/dev/spich                0660   system     camera
 /dev/msm_vidc_reg         0660   system     audio
 /dev/msm_vidc_dec         0660   system     audio
 /dev/msm_vidc_dec_sec     0660   system     audio
@@ -205,7 +206,7 @@
 /dev/wcnss_ctrl           0660   system     system
 
 #nfc permissions
-/dev/pn547                 0660    nfc         nfc
+/dev/bcm2079x              0660    nfc         nfc
 /dev/snfc_uart      0660    nfc nfc
 /dev/snfc_intu_poll 0440    nfc nfc
 /dev/snfc_rfs       0440    nfc nfc
