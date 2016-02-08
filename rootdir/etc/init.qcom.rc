@@ -52,6 +52,9 @@ on early-fs
     chown system /sys/process/task_comm_list
 on post-fs-data
 
+#make factory test result directory
+   mkdir /sns/fingerprint 0775 system system
+   
 # NFC: create data/nfc for nv storage
     mkdir /data/nfc 770 nfc nfc
     mkdir /data/nfc/param 770 nfc nfc
@@ -814,6 +817,11 @@ service bt-sap /system/bin/sapd 15
     class late_start
     disabled
     oneshot
+
+service btpd /system/bin/btpd
+  class late_start
+  user system
+  group system input
 
 service btsnoop /system/bin/btsnoop
    user bluetooth
