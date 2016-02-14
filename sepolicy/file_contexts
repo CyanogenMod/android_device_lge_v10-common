@@ -10,7 +10,3 @@
 /sns/cal(/.*)?                          u:object_r:sensors_data_file:s0
 
 /dev/ttyHSL1                            u:object_r:cir_device:s0
-
-/system/bin/btpd          u:object_r:btpd_exec:s0
-/sys/devices/virtual/input/lge_fingerprint/spi_prepare   u:object_r:sysfs_spi_prepare:s0
-/dev/spich                         u:object_r:video_device:s0
