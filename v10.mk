@@ -179,10 +179,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
 
-# Lights
-PRODUCT_PACKAGES += \
-    lights.msm8992
-
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
